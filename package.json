@@ -1,0 +1,49 @@
+{
+  "name": "snowbeam",
+  "version": "0.0.0",
+  "private": true,
+  "homepage": "https://snowbeam.github.io",
+  "description": "",
+  "engines": {
+    "node": ">=18.10",
+    "pnpm": ">=8.9"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "scripts": {
+    "echo": "echo \"Snowbeam PNPM Workspace\""
+  },
+  "keywords": [
+    "snowbeam",
+    "node",
+    "typescript",
+    "docker",
+    "k8s",
+    "iaas",
+    "ipaas",
+    "custom-applications",
+    "automated",
+    "low-code",
+    "data-flow",
+    "workflow-automation",
+    "low-code-development-platform",
+    "low-code-platform",
+    "integrations",
+    "integrations-framework",
+    "workflow-builder",
+    "form-builder",
+    "business-process-management"
+  ],
+  "author": {
+    "name": "Md Irshad",
+    "email": "mdirshaddev@gmail.com",
+    "url": "https://mdirshad.vercel.app"
+  },
+  "bugs": "https://github.com/snowbeam/snowbeam/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowbeam/snowbeam.git"
+  },
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}
