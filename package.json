@@ -10,7 +10,9 @@
   },
   "packageManager": "pnpm@8.9.0",
   "scripts": {
-    "echo": "echo \"Snowbeam PNPM Workspace\""
+    "echo": "echo \"Snowbeam PNPM Workspace\"",
+    "prettier:format": "prettier -c .",
+    "prettier:format:fix": "prettier -w ."
   },
   "keywords": [
     "snowbeam",
