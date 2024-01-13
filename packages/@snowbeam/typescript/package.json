@@ -1,0 +1,35 @@
+{
+  "name": "@snowbeam/typescript",
+  "private": true,
+  "homepage": "https://snowbeam.github.io",
+  "description": "⚙️ Baseline typescript configuration for this project",
+  "scripts": {
+    "echo": "echo \"Snowbeam PNPM Workspace - ⚙️ Baseline TypeScript configuration\"",
+    "prettier:format": "prettier -c .",
+    "prettier:format:fix": "prettier -w ."
+  },
+  "keywords": [
+    "typescript",
+    "tsconfig",
+    "library"
+  ],
+  "author": {
+    "name": "Md Irshad",
+    "email": "mdirshaddev@gmail.com",
+    "url": "https://mdirshad.vercel.app"
+  },
+  "bugs": "https://github.com/snowbeam/snowbeam/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowbeam/snowbeam.git",
+    "directory": "packages/@snowbeam/typescript"
+  },
+  "license": "MIT",
+  "files": [
+    "base.json",
+    "base-build.json",
+    "nextjs.json",
+    "nestjs.json",
+    "react-library.json"
+  ]
+}

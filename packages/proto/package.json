@@ -1,0 +1,30 @@
+{
+  "name": "grpc-proto",
+  "private": true,
+  "homepage": "https://snowbeam.github.io",
+  "description": "💻 gRPC Proto files for this project",
+  "scripts": {
+    "echo": "echo \"Snowbeam PNPM Workspace - 💻 gRPC Proto files\"",
+    "prettier:format": "prettier -c .",
+    "prettier:format:fix": "prettier -w ."
+  },
+  "keywords": [
+    "gRPC",
+    "proto",
+    "library"
+  ],
+  "author": {
+    "name": "Md Irshad",
+    "email": "mdirshaddev@gmail.com",
+    "url": "https://mdirshad.vercel.app"
+  },
+  "bugs": "https://github.com/snowbeam/snowbeam/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowbeam/snowbeam.git",
+    "directory": "packages/proto"
+  },
+  "license": "MIT",
+  "devDependencies": {},
+  "dependencies": {}
+}

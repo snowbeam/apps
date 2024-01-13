@@ -1,0 +1,21 @@
+{
+  "extends": ["@snowbeam/typescript/base-build.json"],
+  "compilerOptions": {
+    "strict": true,
+    "composite": true,
+    "rootDir": "src",
+    "outDir": "dist",
+    "tsBuildInfoFile": "dist/build.tsbuildinfo",
+    "types": ["node"],
+    "baseUrl": ".",
+    "module": "commonjs",
+		"moduleResolution": "node",
+		"target": "es2019",
+		"lib": ["es2019", "es2020", "es2022.error"],
+  },
+  "ts-node": {
+    "esm": true
+  },
+  "include": ["src/**/*"],
+  "exclude": ["test/**/*"]
+}

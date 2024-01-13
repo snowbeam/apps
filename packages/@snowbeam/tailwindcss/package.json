@@ -1,0 +1,36 @@
+{
+  "name": "@snowbeam/tailwindcss",
+  "private": true,
+  "homepage": "https://snowbeam.github.io",
+  "description": "⚙️ Baseline tailwindcss configuration for this project",
+  "scripts": {
+    "echo": "echo \"Snowbeam PNPM Workspace - ⚙️ Baseline TailwindCSS configuration\"",
+    "prettier:format": "prettier -c .",
+    "prettier:format:fix": "prettier -w ."
+  },
+  "keywords": [
+    "tailwindcss",
+    "library"
+  ],
+  "author": {
+    "name": "Md Irshad",
+    "email": "mdirshaddev@gmail.com",
+    "url": "https://mdirshad.vercel.app"
+  },
+  "bugs": "https://github.com/snowbeam/snowbeam/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowbeam/snowbeam.git",
+    "directory": "packages/@snowbeam/tailwindcss"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@tailwindcss/typography": "^0.5.10",
+    "tailwindcss": "^3.4.1",
+    "tailwindcss-animate": "^1.0.7"
+  },
+  "devDependencies": {
+    "@snowbeam/typescript": "workspace:^",
+    "typescript": "^5.3.3"
+  }
+}

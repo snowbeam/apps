@@ -1,0 +1,10 @@
+{
+  "extends": "@snowbeam/typescript/react-library.json",
+  "compilerOptions": {
+    "composite": true,
+    "declaration": true,
+    "baseUrl": "."
+  },
+  "include": ["."],
+  "exclude": ["node_modules"]
+}
