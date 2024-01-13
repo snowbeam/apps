@@ -2,7 +2,7 @@
   "name": "database",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://github.com/mdirshaddev/snowbeam-cli",
+  "homepage": "https://github.com/snowbeam/snowbeam-cli",
   "description": "🧬 - Designing system level database schema with Prisma",
   "engines": {
     "node": ">=18.10",

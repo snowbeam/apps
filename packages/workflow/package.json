@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://github.com/mdirshaddev/snowbeam",
+  "homepage": "https://github.com/snowbeam/snowbeam",
   "description": "🚂 Baseline workflow code for snowbeam",
   "engines": {
     "node": ">=18.10",

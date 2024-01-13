@@ -2,7 +2,7 @@
   "name": "snowbeam-node-base",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://github.com/mdirshaddev/snowbeam",
+  "homepage": "https://github.com/snowbeam/snowbeam",
   "description": "🗃️ Baseline node base code for snowbeam",
   "engines": {
     "node": ">=18.10",

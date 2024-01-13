@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "type": "module",
-  "homepage": "https://github.com/mdirshaddev/snowbeam-cli",
+  "homepage": "https://github.com/snowbeam/snowbeam-cli",
   "description": "💻 Snowbeam CLI",
   "engines": {
     "node": ">=18.10",

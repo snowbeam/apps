@@ -2,7 +2,7 @@
   "name": "snowbeam-core",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://github.com/mdirshaddev/snowbeam",
+  "homepage": "https://github.com/snowbeam/snowbeam",
   "description": "🛠️ Snowbeam core realted code for Instance level operations control",
   "engines": {
     "node": ">=18.10",

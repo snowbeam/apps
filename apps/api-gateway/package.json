@@ -2,7 +2,7 @@
   "name": "api-gateway",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://github.com/mdirshaddev/snowbeam-cli",
+  "homepage": "https://github.com/snowbeam/snowbeam-cli",
   "description": "🖥️ Microservice API Gateway",
   "engines": {
     "node": ">=18.10",
