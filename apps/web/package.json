@@ -1,5 +1,5 @@
 {
-  "name": "web",
+  "name": "snowbeam-web",
   "version": "0.0.0",
   "private": true,
   "homepage": "",
@@ -32,6 +32,7 @@
   },
   "license": "MIT",
   "devDependencies": {
+    "@snowbeam/typescript": "workspace:^",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",

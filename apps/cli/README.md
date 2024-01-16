@@ -1,13 +1,13 @@
-# oclif-hello-world
+# snowbeam
 
-oclif example Hello World CLI
+💻 Snowbeam CLI
 
 [![oclif](https://img.shields.io/badge/cli-oclif-brightgreen.svg)](https://oclif.io)
 [![CircleCI](https://circleci.com/gh/oclif/hello-world/tree/main.svg?style=shield)](https://circleci.com/gh/oclif/hello-world/tree/main)
 [![GitHub license](https://img.shields.io/github/license/oclif/hello-world)](https://github.com/oclif/hello-world/blob/main/LICENSE)
 
 <!-- toc -->
-* [oclif-hello-world](#oclif-hello-world)
+* [snowbeam](#snowbeam)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
@@ -31,61 +31,18 @@ USAGE
 # Commands
 
 <!-- commands -->
-* [`snowbeam hello PERSON`](#snowbeam-hello-person)
-* [`snowbeam hello world`](#snowbeam-hello-world)
 * [`snowbeam help [COMMANDS]`](#snowbeam-help-commands)
+* [`snowbeam list:workflow`](#snowbeam-listworkflow)
 * [`snowbeam plugins`](#snowbeam-plugins)
 * [`snowbeam plugins:install PLUGIN...`](#snowbeam-pluginsinstall-plugin)
 * [`snowbeam plugins:inspect PLUGIN...`](#snowbeam-pluginsinspect-plugin)
 * [`snowbeam plugins:install PLUGIN...`](#snowbeam-pluginsinstall-plugin-1)
 * [`snowbeam plugins:link PLUGIN`](#snowbeam-pluginslink-plugin)
 * [`snowbeam plugins:uninstall PLUGIN...`](#snowbeam-pluginsuninstall-plugin)
-* [`snowbeam plugins reset`](#snowbeam-plugins-reset)
+* [`snowbeam plugins:reset`](#snowbeam-pluginsreset)
 * [`snowbeam plugins:uninstall PLUGIN...`](#snowbeam-pluginsuninstall-plugin-1)
 * [`snowbeam plugins:uninstall PLUGIN...`](#snowbeam-pluginsuninstall-plugin-2)
-* [`snowbeam plugins update`](#snowbeam-plugins-update)
-
-## `snowbeam hello PERSON`
-
-Say hello
-
-```
-USAGE
-  $ snowbeam hello PERSON -f <value>
-
-ARGUMENTS
-  PERSON  Person to say hello to
-
-FLAGS
-  -f, --from=<value>  (required) Who is saying hello
-
-DESCRIPTION
-  Say hello
-
-EXAMPLES
-  $ oex hello friend --from oclif
-  hello friend from oclif! (./src/commands/hello/index.ts)
-```
-
-_See code: [dist/commands/hello/index.ts](https://github.com/snowbeam/snowbeam/blob/v0.0.0/dist/commands/hello/index.ts)_
-
-## `snowbeam hello world`
-
-Say hello world
-
-```
-USAGE
-  $ snowbeam hello world
-
-DESCRIPTION
-  Say hello world
-
-EXAMPLES
-  $ snowbeam hello world
-  hello world! (./src/commands/hello/world.ts)
-```
-
-_See code: [dist/commands/hello/world.ts](https://github.com/snowbeam/snowbeam/blob/v0.0.0/dist/commands/hello/world.ts)_
+* [`snowbeam plugins:update`](#snowbeam-pluginsupdate)
 
 ## `snowbeam help [COMMANDS]`
 
@@ -106,6 +63,32 @@ DESCRIPTION
 ```
 
 _See code: [@oclif/plugin-help](https://github.com/oclif/plugin-help/blob/v5.2.20/lib/commands/help.ts)_
+
+## `snowbeam list:workflow`
+
+List workflows
+
+```
+USAGE
+  $ snowbeam list:workflow [--active <value>] [-h] [--onlyId]
+
+FLAGS
+  -h, --help            Show CLI help.
+      --active=<value>  [default: true] Filter workflows by active status. Can be true or false
+      --onlyId          Outputs workflow IDs only, one per line
+
+DESCRIPTION
+  List workflows
+
+EXAMPLES
+  $ snowbeam list:workflow
+
+  $ snowbeam list:workflow --active=true --onlyId
+
+  $ snowbeam list:workflow --active=false
+```
+
+_See code: [dist/src/commands/list/workflow.js](https://github.com/snowbeam/snowbeam/blob/v0.0.0/dist/src/commands/list/workflow.js)_
 
 ## `snowbeam plugins`
 
@@ -136,7 +119,7 @@ Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ snowbeam plugins add plugins:install PLUGIN...
+  $ snowbeam plugins:add plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -162,14 +145,14 @@ DESCRIPTION
 
 
 ALIASES
-  $ snowbeam plugins add
+  $ snowbeam plugins:add
 
 EXAMPLES
-  $ snowbeam plugins add myplugin 
+  $ snowbeam plugins:add myplugin 
 
-  $ snowbeam plugins add https://github.com/someuser/someplugin
+  $ snowbeam plugins:add https://github.com/someuser/someplugin
 
-  $ snowbeam plugins add someuser/someplugin
+  $ snowbeam plugins:add someuser/someplugin
 ```
 
 ## `snowbeam plugins:inspect PLUGIN...`
@@ -178,7 +161,7 @@ Displays installation properties of a plugin.
 
 ```
 USAGE
-  $ snowbeam plugins inspect PLUGIN...
+  $ snowbeam plugins:inspect PLUGIN...
 
 ARGUMENTS
   PLUGIN  [default: .] Plugin to inspect.
@@ -194,7 +177,7 @@ DESCRIPTION
   Displays installation properties of a plugin.
 
 EXAMPLES
-  $ snowbeam plugins inspect myplugin
+  $ snowbeam plugins:inspect myplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.14/lib/commands/plugins/inspect.ts)_
@@ -205,7 +188,7 @@ Installs a plugin into the CLI.
 
 ```
 USAGE
-  $ snowbeam plugins install PLUGIN...
+  $ snowbeam plugins:install PLUGIN...
 
 ARGUMENTS
   PLUGIN  Plugin to install.
@@ -231,14 +214,14 @@ DESCRIPTION
 
 
 ALIASES
-  $ snowbeam plugins add
+  $ snowbeam plugins:add
 
 EXAMPLES
-  $ snowbeam plugins install myplugin 
+  $ snowbeam plugins:install myplugin 
 
-  $ snowbeam plugins install https://github.com/someuser/someplugin
+  $ snowbeam plugins:install https://github.com/someuser/someplugin
 
-  $ snowbeam plugins install someuser/someplugin
+  $ snowbeam plugins:install someuser/someplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.14/lib/commands/plugins/install.ts)_
@@ -249,7 +232,7 @@ Links a plugin into the CLI for development.
 
 ```
 USAGE
-  $ snowbeam plugins link PLUGIN
+  $ snowbeam plugins:link PLUGIN
 
 ARGUMENTS
   PATH  [default: .] path to plugin
@@ -268,7 +251,7 @@ DESCRIPTION
 
 
 EXAMPLES
-  $ snowbeam plugins link myplugin
+  $ snowbeam plugins:link myplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.14/lib/commands/plugins/link.ts)_
@@ -279,7 +262,7 @@ Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ snowbeam plugins remove plugins:uninstall PLUGIN...
+  $ snowbeam plugins:remove plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -292,20 +275,20 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ snowbeam plugins unlink
-  $ snowbeam plugins remove
+  $ snowbeam plugins:unlink
+  $ snowbeam plugins:remove
 
 EXAMPLES
-  $ snowbeam plugins remove myplugin
+  $ snowbeam plugins:remove myplugin
 ```
 
-## `snowbeam plugins reset`
+## `snowbeam plugins:reset`
 
 Remove all user-installed and linked plugins.
 
 ```
 USAGE
-  $ snowbeam plugins reset
+  $ snowbeam plugins:reset
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.14/lib/commands/plugins/reset.ts)_
@@ -316,7 +299,7 @@ Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ snowbeam plugins uninstall PLUGIN...
+  $ snowbeam plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -329,11 +312,11 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ snowbeam plugins unlink
-  $ snowbeam plugins remove
+  $ snowbeam plugins:unlink
+  $ snowbeam plugins:remove
 
 EXAMPLES
-  $ snowbeam plugins uninstall myplugin
+  $ snowbeam plugins:uninstall myplugin
 ```
 
 _See code: [@oclif/plugin-plugins](https://github.com/oclif/plugin-plugins/blob/v4.1.14/lib/commands/plugins/uninstall.ts)_
@@ -344,7 +327,7 @@ Removes a plugin from the CLI.
 
 ```
 USAGE
-  $ snowbeam plugins unlink plugins:uninstall PLUGIN...
+  $ snowbeam plugins:unlink plugins:uninstall PLUGIN...
 
 ARGUMENTS
   PLUGIN  plugin to uninstall
@@ -357,20 +340,20 @@ DESCRIPTION
   Removes a plugin from the CLI.
 
 ALIASES
-  $ snowbeam plugins unlink
-  $ snowbeam plugins remove
+  $ snowbeam plugins:unlink
+  $ snowbeam plugins:remove
 
 EXAMPLES
-  $ snowbeam plugins unlink myplugin
+  $ snowbeam plugins:unlink myplugin
 ```
 
-## `snowbeam plugins update`
+## `snowbeam plugins:update`
 
 Update installed plugins.
 
 ```
 USAGE
-  $ snowbeam plugins update [-h] [-v]
+  $ snowbeam plugins:update [-h] [-v]
 
 FLAGS
   -h, --help     Show CLI help.

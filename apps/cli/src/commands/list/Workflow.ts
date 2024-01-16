@@ -1,10 +1,11 @@
-import { flags } from "@oclif/command";
-import { type IBooleanFlag } from "@oclif/parser/lib/flags";
+/* eslint-disable import/no-unresolved */
+import { Flags } from "@oclif/core";
+import { BaseCommand } from "src";
 
-import { BaseCommand } from "../BaseCommand";
-
+/* The `ListWorkflowCommand` class is a TypeScript class that lists workflows based on their active
+status and outputs their IDs and names. */
 export default class ListWorkflowCommand extends BaseCommand {
-  static description = "\nList workflows";
+  static description = "List workflows";
 
   static examples = [
     "$ snowbeam list:workflow",
@@ -12,40 +13,44 @@ export default class ListWorkflowCommand extends BaseCommand {
     "$ snowbeam list:workflow --active=false"
   ];
 
-  static flags: {
-    active: flags.IOptionFlag<string>;
-    help: IBooleanFlag<void>;
-    onlyId: IBooleanFlag<boolean>;
-  } = {
-    active: flags.string({
+  static flags = {
+    active: Flags.string({
       default: "true",
       description: "Filter workflows by active status. Can be true or false",
       name: "active"
     }),
-    help: flags.help({ char: "h" }),
-    onlyId: flags.boolean({
+    help: Flags.help({ char: "h" }),
+    onlyId: Flags.boolean({
       description: "Outputs workflow IDs only, one per line"
     })
   };
 
-  async run() {
-    const { flags } = this.parse(ListWorkflowCommand);
+  async run(): Promise<void> {
+    try {
+      const { flags } = await this.parse(ListWorkflowCommand);
+      const { active, onlyId } = flags;
 
-    if (
-      flags.active !== undefined &&
-      !["false", "true"].includes(flags.active)
-    ) {
-      this.error("The --active flag has to be passed using true or false");
-    }
+      if (active !== undefined && !["false", "true"].includes(active)) {
+        this.error("The --active flag has to be passed using true or false");
+      }
 
-    const workflowRepository: Array<{id: string; name: string;}> = [{id: '', name: ''}];
+      const workflowRepository: Array<{ id: string; name: string }> = [
+        { id: "mrvjhb", name: "Invoice Mapper" },
+        { id: "mrvjhb", name: "Invoice Mapper" },
+        { id: "mrvjhb", name: "Invoice Mapper" }
+      ];
 
-    const workflows = flags.active === undefined ? workflowRepository : workflowRepository;
+      const workflows =
+        active === undefined ? workflowRepository : workflowRepository;
 
-    if (flags.onlyId) {
-      for (const workflow of workflows) this.logger.info(workflow.id);
-    } else {
-      for (const workflow of workflows) this.logger.info(`${workflow.id}|${workflow.name}`)
+      if (onlyId) {
+        for (const workflow of workflows) console.log(workflow.id);
+      } else {
+        for (const workflow of workflows)
+          console.log(`${workflow.id}|${workflow.name}`);
+      }
+    } catch (error: unknown) {
+      console.log(error as Error);
     }
   }
 }

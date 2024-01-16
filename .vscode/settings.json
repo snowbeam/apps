@@ -64,5 +64,6 @@
       "strings": true
     },
     "editor.suggest.insertMode": "replace"
-  }
+  },
+  "editor.fontLigatures": true
 }

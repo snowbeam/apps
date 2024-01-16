@@ -3,3 +3,9 @@ node_modules
 
 # nx
 .nx/cache
+
+# ignore all dist folders
+**/dist
+**/build
+**/.next
+**/tmp

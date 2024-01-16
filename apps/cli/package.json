@@ -2,7 +2,6 @@
   "name": "snowbeam",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
   "homepage": "https://github.com/snowbeam/snowbeam-cli",
   "description": "💻 Snowbeam CLI",
   "engines": {
@@ -17,6 +16,8 @@
     "build": "shx rm -rf dist && tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
     "lint": "eslint . --ext .ts",
     "postpack": "shx rm -f oclif.manifest.json",
+    "prepack": "pnpm run build && oclif manifest && oclif readme",
+    "prepare": "pnpm run build",
     "posttest": "pnpm run lint",
     "test": "mocha --forbid-only \"test/**/*.test.ts\"",
     "version": "oclif readme && git add README.md"
@@ -43,7 +44,9 @@
     "@types/chai": "^4",
     "@types/mocha": "^10",
     "@types/node": "^18",
+    "@types/pg": "^8.10.9",
     "chai": "^4",
+    "drizzle-kit": "^0.20.12",
     "eslint": "^8",
     "eslint-config-oclif": "^5",
     "eslint-config-oclif-typescript": "^3",
@@ -52,7 +55,8 @@
     "oclif": "^4.1.0",
     "shx": "^0.3.4",
     "ts-node": "^10.9.2",
-    "typescript": "^5"
+    "tsc-alias": "^1.8.8",
+    "typescript": "^5.3.3"
   },
   "dependencies": {
     "@oclif/command": "^1.8.36",
@@ -64,23 +68,27 @@
     "@oclif/plugin-plugins": "^4",
     "convict": "^6.2.4",
     "dotenv": "^16.3.1",
+    "drizzle-orm": "^0.29.3",
+    "pg": "^8.11.3",
     "reflect-metadata": "^0.1.13",
     "typedi": "^0.10.0",
     "winston": "^3.11.0"
   },
   "bin": {
-    "snowbeam": "./bin/snowbeam.js"
+    "snowbeam": "./bin/snowbeam"
   },
   "files": [
     "/bin",
     "/dist",
     "/oclif.manifest.json"
   ],
-  "exports": "./dist/index.js",
-  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": "./dist/src/index.js"
+  },
+  "types": "./dist/src/index.d.ts",
   "oclif": {
     "bin": "snowbeam",
-    "commands": "./dist/commands",
+    "commands": "./dist/src/commands",
     "plugins": [
       "@oclif/plugin-help",
       "@oclif/plugin-plugins"

@@ -1,5 +1,5 @@
 {
-  "name": "database",
+  "name": "snowbeam-database",
   "version": "0.0.0",
   "private": true,
   "homepage": "https://github.com/snowbeam/snowbeam-cli",
@@ -17,7 +17,11 @@
     "introspection:push": "pnpm introspection && prisma db push",
     "studio": "prisma studio"
   },
-  "keywords": ["prisma", "schema-development", "postgresql"],
+  "keywords": [
+    "prisma",
+    "schema-development",
+    "postgresql"
+  ],
   "author": {
     "name": "Md Irshad",
     "email": "mdirshaddev@gmail.com",

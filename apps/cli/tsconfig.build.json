@@ -1,18 +1,17 @@
 {
+  "$schema": "https://json.schemastore.org/tsconfig",
   "extends": ["@snowbeam/typescript/base-build.json"],
   "compilerOptions": {
-    "composite": true,
-    "rootDir": "src",
+    "strict": true,
     "outDir": "dist",
-    "tsBuildInfoFile": "dist/build.tsbuildinfo",
+    "rootDir": ".",
     "target": "es2022",
-    "module": "Node16",
-    "moduleResolution": "Node16",
-    "types": ["node"]
+    "composite": true,
+    "module": "commonjs",
+    "declaration": true,
+    "baseUrl": ".",
+    "tsBuildInfoFile": "dist/build.tsbuildinfo"
   },
-  "ts-node": {
-    "esm": true
-  },
-  "include": ["src/**/*"],
-  "exclude": ["test/**/*"]
+  "exclude": ["node_modules", "bin", "test", "dist", "**/*spec.ts"],
+  "include": ["src"]
 }

@@ -4,8 +4,9 @@
     "unicorn/filename-case": [
       "error",
       {
-        "case": "pascalCase"
+        "case": "kebabCase"
       }
     ]
-  }
+  },
+  "ignorePatterns": ["bin/**", "dist/**"]
 }

@@ -10,7 +10,7 @@
   "tsc-alias": {
     "replacers": {
       "base-url": {
-        "enabled": false
+        "enabled": true
       }
     }
   }
