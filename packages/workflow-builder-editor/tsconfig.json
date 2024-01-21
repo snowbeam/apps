@@ -1,35 +1,29 @@
 {
+  "extends": ["@snowbeam/typescript/react-library.json"],
   "compilerOptions": {
     "target": "ES2020",
-    "useDefineForClassFields": true,
     "lib": ["ES2020", "DOM", "DOM.Iterable"],
     "module": "ESNext",
-    "skipLibCheck": true,
 
     /* Bundler mode */
-    "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "emitDeclarationOnly": false,
+    "allowJs": true,
+    "allowImportingTsExtensions": false,
+    "allowSyntheticDefaultImports": true, 
     "declaration": true,
+    "declarationDir": "./dist",
     "resolveJsonModule": true,
     "isolatedModules": true,
-    "noEmit": true,
+    "noEmit": false,
     "jsx": "react-jsx",
-    
-    /* Linting */
-    "strict": true,
-    "noUnusedLocals": true,
-    "noUnusedParameters": true,
-    "noFallthroughCasesInSwitch": true,
 
     /* Path mappings */
     "baseUrl": ".",
 
-    // Other options
+    /* Other options */
     "outDir": "dist",
-    "incremental": true,
+    "composite": true,
     "tsBuildInfoFile": "dist/build.tsbuildinfo"
   },
-  "include": ["src"],
+  "include": ["src", "index.ts"],
   "references": [{ "path": "./tsconfig.node.json" }]
 }

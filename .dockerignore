@@ -1,0 +1,41 @@
+# Dependency directories
+node_modules
+.pnpm
+
+# Package manager logs
+pnpm-debug.log
+
+# TypeScript compilation artifacts
+*.tsbuildinfo
+
+# Next.js build artifacts
+.next
+
+# Build output directories
+out
+dist
+
+# Editor-specific files
+.vscode
+.idea
+*.sublime*
+
+# Version control system files
+.git
+.svn
+.hg
+CVS
+
+# Operating system files
+Thumbs.db
+.DS_Store
+
+# Environment-specific files
+.env
+.env.local
+
+# Test and documentation files
+__tests__
+tests
+coverage
+docs

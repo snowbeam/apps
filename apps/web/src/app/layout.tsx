@@ -1,6 +1,9 @@
+import "app/globals.css";
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import "./globals.css";
+
+import "snowbeam-workflow-builder-editor/dist/style.css";
 
 const inter = Inter({ subsets: ["latin"] });
 
