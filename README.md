@@ -1,7 +1,7 @@
 # snowbeam
 
-💠 A SaaS tool for building IT Workflows with, Managing customers data, advanced dashboard and reporting.
+💠 A SaaS platform
 
 ## Features
 
-*Coming soon*
+_Coming soon_
