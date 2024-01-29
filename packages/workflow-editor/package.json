@@ -1,5 +1,5 @@
 {
-  "name": "snowbeam-workflow-editor",
+  "name": "@snowbeam/workflow-editor",
   "version": "0.0.0",
   "private": true,
   "main": "dist/index.cjs.js",
@@ -47,8 +47,6 @@
     "reactflow": "^11.10.1"
   },
   "devDependencies": {
-    "@snowbeam/eslint-config": "workspace:^",
-    "@snowbeam/typescript-config": "workspace:^",
     "@storybook/addon-essentials": "^7.6.8",
     "@storybook/addon-interactions": "^7.6.8",
     "@storybook/addon-links": "^7.6.8",
