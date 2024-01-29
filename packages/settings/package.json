@@ -1,0 +1,47 @@
+{
+  "name": "@snowbeam/settings",
+  "version": "0.0.0",
+  "private": true,
+  "main": "src/index.ts",
+  "type": "module",
+  "homepage": "https://github.com/snowbeam/snowbeam",
+  "description": "🏗️ Snowbeam instance settings",
+  "engines": {
+    "node": ">=18.10",
+    "pnpm": ">=8.9"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "scripts": {
+    "echo": "echo \"Snowbeam PNPM Workspace - 🏗️ Snowbeam instance settings\"",
+    "build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
+    "eslint": "eslint . --quiet",
+    "eslint:fix": "eslint . --fix",
+    "prettier:format": "prettier --check .",
+    "prettier:format:fix": "prettier --write .",
+    "typecheck": "tsc"
+  },
+  "keywords": [],
+  "author": {
+    "name": "Md Irshad",
+    "email": "mdirshaddev@gmail.com",
+    "url": "https://mdirshad.vercel.app"
+  },
+  "bugs": "https://github.com/snowbeam/snowbeam/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowbeam/snowbeam.git",
+    "directory": "packages/settings"
+  },
+  "license": "MIT",
+  "dependencies": {},
+  "devDependencies": {
+    "prettier": "^3.2.4",
+    "tsc-alias": "^1.8.8",
+    "typescript": "^5.3.3"
+  },
+  "types": "dist/index.d.ts",
+  "exports": "./dist/index.js",
+  "files": [
+    "dist"
+  ]
+}
