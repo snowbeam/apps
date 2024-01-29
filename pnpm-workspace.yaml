@@ -1,6 +1,7 @@
 packages:
   - "apps/*"
-  - "libs/*"
-  - "services/*"
+  - "apps/@snowbeam-microservices/*"
   - "packages/*"
-  - "packages/@snowbeam/*"
+  - "packages/@snowbeam-components/*"
+  - "packages/@snowbeam-config/*"
+  - "packages/@snowbeam-implementations/*"
