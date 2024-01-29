@@ -1,6 +1,6 @@
 packages:
   - "apps/*"
   - "packages/*"
-  # - "packages/@snowbeam-components/*"
-  # - "packages/@snowbeam-configs/*"
-  # - "packages/@snowbeam-modules/*"
+  - "packages/components/*"
+  - "packages/configs/*"
+  - "packages/modules/*"

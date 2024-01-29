@@ -1,0 +1,34 @@
+{
+  "name": "@snowbeam/settings",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "homepage": "https://github.com/snowbeam/snowbeam",
+  "description": "🏗️ Snowbeam instance settings",
+  "engines": {
+    "node": ">=18.10",
+    "pnpm": ">=8.9"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "scripts": {
+    "echo": "echo \"Snowbeam PNPM Workspace - 🏗️  Snowbeam instance settings\"",
+    "prettier:format": "prettier --check .",
+    "prettier:format:fix": "prettier --write ."
+  },
+  "keywords": [],
+  "author": {
+    "name": "Md Irshad",
+    "email": "mdirshaddev@gmail.com",
+    "url": "https://mdirshad.vercel.app"
+  },
+  "bugs": "https://github.com/snowbeam/snowbeam/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowbeam/snowbeam.git",
+    "directory": "packages/settings"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.2.4"
+  }
+}
