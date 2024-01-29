@@ -1,5 +1,12 @@
 {
-  "extends": ["@snowbeam/typescript/nestjs.json"],
-  "include": ["src"],
+  "compilerOptions": {
+    "baseUrl": ".",
+    "outDir": "./dist",
+    "strict": true,
+    "allowJs": false,
+    "removeComments": true,
+    "sourceMap": true
+  },
+  "include": ["src", "drizzle.config.ts", "schema"],
   "exclude": ["node_modules", "test", "dist"]
 }

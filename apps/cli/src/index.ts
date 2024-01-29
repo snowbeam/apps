@@ -1,5 +1,7 @@
+/* eslint-disable import/no-unresolved */
 import { Command } from "@oclif/core";
 import "reflect-metadata";
+import { AbstractServer } from "server/abstract-server";
 
 /* The statement `export { run } from "@oclif/core";` is exporting the `run` function from the
 `@oclif/core` module. This allows other modules or files to import and use the `run` function from
@@ -10,4 +12,10 @@ export { run } from "@oclif/core";
 `BaseCommand` that extends the `Command` class. The `BaseCommand` class is marked as `abstract`,
 which means it cannot be instantiated directly but can only be used as a base class for other
 classes. */
-export abstract class BaseCommand extends Command {}
+export abstract class BaseCommand extends Command {
+  protected server!: AbstractServer;
+
+  public async init(): Promise<void> {
+    await this.server.init();
+  }
+}

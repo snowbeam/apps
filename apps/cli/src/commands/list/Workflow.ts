@@ -1,3 +1,4 @@
+/* eslint-disable unicorn/filename-case */
 /* eslint-disable import/no-unresolved */
 import { Flags } from "@oclif/core";
 import { BaseCommand } from "src";

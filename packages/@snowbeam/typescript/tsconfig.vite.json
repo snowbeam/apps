@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "compilerOptions": {
+    /* Visit https://aka.ms/tsconfig to read more about this file */
+
+    /* Projects */
+    "incremental": false,                             /* Save .tsbuildinfo files to allow for incremental compilation of projects. */
+    "composite": true,                                /* Enable constraints that allow a TypeScript project to be used with project references. */
+
+    /* Language and Environment */
+    "target": "es2020",                               /* Set the JavaScript language version for emitted JavaScript and include compatible library declarations. */
+    "lib": ["es2020", "dom", "dom.iterable"],         /* Specify a set of bundled library declaration files that describe the target runtime environment. */
+    "jsx": "react-jsx",                               /* Specify what JSX code is generated. */
+    "useDefineForClassFields": true,                  /* Emit ECMAScript-standard-compliant class fields. */
+
+    /* Modules */
+    "module": "esnext",                               /* Specify what module code is generated. */
+    "moduleResolution": "bundler",                    /* Specify how TypeScript looks up a file from a given module specifier. */
+    "allowImportingTsExtensions": true,               /* Allow imports to include TypeScript file extensions. Requires '--moduleResolution bundler' and either '--noEmit' or '--emitDeclarationOnly' to be set. */
+    "resolveJsonModule": true,                        /* Enable importing .json files. */
+
+    /* JavaScript Support */
+    "allowJs": false,                                 /* Allow JavaScript files to be a part of your program. Use the 'checkJS' option to get errors from these files. */
+    // "checkJs": true,                               /* Enable error reporting in type-checked JavaScript files. */
+    // "maxNodeModuleJsDepth": 1,                     /* Specify the maximum folder depth used for checking JavaScript files from 'node_modules'. Only applicable with 'allowJs'. */
+
+    /* Emit */
+    "declaration": true,                              /* Generate .d.ts files from TypeScript and JavaScript files in your project. */
+    "declarationMap": true,                           /* Create sourcemaps for d.ts files. */
+    "emitDeclarationOnly": true,                      /* Only output d.ts files and not JavaScript files. */
+    "sourceMap": false,                               /* Create source map files for emitted JavaScript files. */
+    "noEmit": true,                                   /* Disable emitting files from a compilation. */
+    "newLine": "lf",                                  /* Set the newline character for emitting files. */
+
+    /* Interop Constraints */
+    "isolatedModules": true,                          /* Ensure that each file can be safely transpiled without relying on other imports. */
+    "esModuleInterop": true                           /* Emit additional JavaScript to ease support for importing CommonJS modules. This enables 'allowSyntheticDefaultImports' for type compatibility. */,
+    "forceConsistentCasingInFileNames": true          /* Ensure that casing is correct in imports. */,
+
+    /* Type Checking */
+    "strict": true,                                   /* Enable all strict type-checking options. */
+    "noUnusedLocals": true,                           /* Enable error reporting when local variables aren't read. */
+    "noUnusedParameters": true,                       /* Raise an error when a function parameter isn't read. */
+    "noFallthroughCasesInSwitch": true,               /* Enable error reporting for fallthrough cases in switch statements. */
+
+    /* Completeness */
+    "skipDefaultLibCheck": true,                      /* Skip type checking .d.ts files that are included with TypeScript. */
+    "skipLibCheck": true ,                            /* Skip type checking all .d.ts files. */
+
+  },
+  "references": [
+    {
+      "path": "./tsconfig.json"
+    }
+  ]
+}

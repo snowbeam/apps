@@ -9,8 +9,8 @@
   "editor.formatOnType": true,
   "editor.autoIndent": "full",
   "editor.codeActionsOnSave": {
-    "source.fixAll": true,
-    "source.fixAll.eslint": true
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
   },
   // File Extension config
   "[json]": {

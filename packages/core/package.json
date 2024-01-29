@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "homepage": "https://github.com/snowbeam/snowbeam",
-  "description": "🛠️ Snowbeam core realted code for Instance level operations control",
+  "description": "🛠️ Snowbeam core realted code for Instance level settings and operations control",
   "engines": {
     "node": ">=18.10",
     "pnpm": ">=8.9"
@@ -11,8 +11,8 @@
   "packageManager": "pnpm@8.9.0",
   "scripts": {
     "echo": "echo \"Snowbeam PNPM Workspace - 🛠️ Snowbeam core realted code for Instance level operations control\"",
-    "prettier:format": "prettier -c .",
-    "prettier:format:fix": "prettier -w ."
+    "prettier:format": "prettier --check .",
+    "prettier:format:fix": "prettier --write ."
   },
   "keywords": [
     "snowbeam-core",
@@ -27,9 +27,10 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/snowbeam/snowbeam.git",
-    "directory": "packages/workflow"
+    "directory": "packages/core"
   },
   "license": "MIT",
+  "dependencies": {},
   "devDependencies": {
     "@snowbeam/typescript": "workspace:^",
     "@types/node": "^18",
@@ -38,10 +39,9 @@
     "ts-node": "^10.9.2",
     "typescript": "^5"
   },
-  "dependencies": {},
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "files": [
     "/dist"
-  ],
-  "exports": "./dist/index.js",
-  "types": "./dist/index.d.ts"
+  ]
 }

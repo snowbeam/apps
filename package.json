@@ -2,7 +2,7 @@
   "name": "snowbeam",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://snowbeam.github.io",
+  "homepage": "https://github.com/snowbeam/snowbeam",
   "description": "💠 A SaaS tool for building IT Workflows, Managing customers data, advanced dashboard and reporting.",
   "engines": {
     "node": ">=18.10",
@@ -14,8 +14,8 @@
     "start": "run-script-os",
     "start:windows": "cd apps/cli/bin && snowbeam",
     "preinstall": "node scripts/block-npm-script.js",
-    "prettier:format": "prettier -c .",
-    "prettier:format:fix": "prettier -w ."
+    "prettier:format": "prettier --check .",
+    "prettier:format:fix": "prettier --write ."
   },
   "keywords": [
     "snowbeam",

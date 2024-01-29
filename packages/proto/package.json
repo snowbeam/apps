@@ -1,12 +1,18 @@
 {
-  "name": "grpc-proto",
+  "name": "snowbeam-grpc-proto",
+  "version": "0.0.0",
   "private": true,
-  "homepage": "https://snowbeam.github.io",
+  "homepage": "https://github.com/snowbeam/snowbeam",
   "description": "💻 gRPC Proto files for this project",
+  "engines": {
+    "node": ">=18.10",
+    "pnpm": ">=8.9"
+  },
+  "packageManager": "pnpm@8.9.0",
   "scripts": {
     "echo": "echo \"Snowbeam PNPM Workspace - 💻 gRPC Proto files\"",
-    "prettier:format": "prettier -c .",
-    "prettier:format:fix": "prettier -w ."
+    "prettier:format": "prettier --check .",
+    "prettier:format:fix": "prettier --write ."
   },
   "keywords": [
     "gRPC",
@@ -25,6 +31,6 @@
     "directory": "packages/proto"
   },
   "license": "MIT",
-  "devDependencies": {},
-  "dependencies": {}
+  "dependencies": {},
+  "devDependencies": {}
 }

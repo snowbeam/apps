@@ -1,18 +1,22 @@
 {
   "name": "@snowbeam/typescript",
-  "private": true,
   "version": "0.0.0",
-  "homepage": "https://snowbeam.github.io",
+  "private": true,
+  "homepage": "https://github.com/snowbeam/snowbeam",
   "description": "⚙️ Baseline typescript configuration for this project",
+  "engines": {
+    "node": ">=18.10",
+    "pnpm": ">=8.9"
+  },
+  "packageManager": "pnpm@8.9.0",
   "scripts": {
     "echo": "echo \"Snowbeam PNPM Workspace - ⚙️ Baseline TypeScript configuration\"",
-    "prettier:format": "prettier -c .",
-    "prettier:format:fix": "prettier -w ."
+    "prettier:format": "prettier --check .",
+    "prettier:format:fix": "prettier --write ."
   },
   "keywords": [
     "typescript",
-    "tsconfig",
-    "library"
+    "typescript-config"
   ],
   "author": {
     "name": "Md Irshad",
@@ -27,10 +31,10 @@
   },
   "license": "MIT",
   "files": [
-    "base.json",
-    "base-build.json",
-    "nextjs.json",
-    "nestjs.json",
-    "react-library.json"
+    "tsconfig.json",
+    "tsconfig.nest.json",
+    "tsconfig.next.json",
+    "tsconfig.oclif,json",
+    "tsconfig.vite.json"
   ]
 }

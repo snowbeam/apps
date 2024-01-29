@@ -1,17 +1,21 @@
 {
   "$schema": "https://json.schemastore.org/tsconfig",
-  "extends": ["@snowbeam/typescript/base.json"],
+  "extends": [],
   "compilerOptions": {
     "strict": true,
     "outDir": "dist",
-    "rootDir": "src",
-    "types": ["node"],
+    "rootDir": ".",
+    "types": ["node", "fastify"],
     "target": "es2022",
     "composite": true,
     "module": "commonjs",
     "declaration": true,
     "baseUrl": ".",
+    "emitDecoratorMetadata": true,
+    "experimentalDecorators": true,
+    "preserveSymlinks": true,
+    "esModuleInterop": true
   },
-  "include": ["src"],
+  "include": ["src", "server"],
   "exclude": ["node_modules", "bin", "test", "dist", "**/*spec.ts"]
 }

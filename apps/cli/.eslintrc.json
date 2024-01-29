@@ -6,7 +6,8 @@
       {
         "case": "kebabCase"
       }
-    ]
+    ],
+    "new-cap": ["off"]
   },
   "ignorePatterns": ["bin/**", "dist/**"]
 }

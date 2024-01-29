@@ -1,0 +1,37 @@
+{
+  "name": "@snowbeam/prettier-config",
+  "version": "0.0.0",
+  "private": true,
+  "main": "./shared-prettier-config.js",
+  "homepage": "https://github.com/snowbeam/snowbeam",
+  "description": "⚙️ Baseline prettier configuration for this project",
+  "engines": {
+    "node": ">=18.10",
+    "pnpm": ">=8.9"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "scripts": {
+    "echo": "echo \"Snowbeam PNPM Workspace - ⚙️ Baseline Prettier configuration\"",
+    "prettier:format": "prettier --check .",
+    "prettier:format:fix": "prettier --write ."
+  },
+  "keywords": ["prettier"],
+  "author": {
+    "name": "Md Irshad",
+    "email": "mdirshaddev@gmail.com",
+    "url": "https://mdirshad.vercel.app"
+  },
+  "bugs": "https://github.com/snowbeam/snowbeam/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowbeam/snowbeam.git",
+    "directory": "packages/@snowbeam/prettier-config"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "prettier": "^3.1.1"
+  },
+  "peerDependencies": {
+    "prettier": "^3.1.1"
+  }
+}

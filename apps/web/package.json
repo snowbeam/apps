@@ -2,21 +2,22 @@
   "name": "snowbeam-web",
   "version": "0.0.0",
   "private": true,
-  "homepage": "",
-  "description": "💠 A SaaS tool for building IT Workflows, Managing customers data, advanced dashboard and reporting.",
+  "homepage": "https://github.com/snowbeam/snowbeam",
+  "description": "💠 A SaaS tool for building Automation Workflows, Custom Application for Web and Mobile, Manage customers data, advanced dashboard and reporting.",
   "engines": {
     "node": ">=18.10",
     "pnpm": ">=8.9"
   },
   "packageManager": "pnpm@8.9.0",
   "scripts": {
-    "echo": "echo \"Snowbeam PNPM Workspace - 💠 A SaaS tool for building IT Workflows, Managing customers data, advanced dashboard and reporting.\"",
-    "dev": "next dev",
-    "build": "next build",
+    "echo": "echo \"Snowbeam PNPM Workspace - 💠 A SaaS tool for building Automation Workflows, Custom Application for Web and Mobile, Manage customers data, advanced dashboard and reporting.\"",
     "start": "next start",
-    "lint": "next lint",
-    "prettier:format": "prettier -c .",
-    "prettier:format:fix": "prettier -w ."
+    "start:dev": "next dev",
+    "build": "next build",
+    "eslint": "next lint",
+    "eslint:fix": "next lint --fix",
+    "prettier:format": "prettier --check .",
+    "prettier:format:fix": "prettier --write ."
   },
   "keywords": [],
   "author": {
@@ -31,6 +32,12 @@
     "directory": "apps/web"
   },
   "license": "MIT",
+  "dependencies": {
+    "next": "14.0.4",
+    "react": "^18",
+    "react-dom": "^18",
+    "snowbeam-workflow-builder-editor": "*"
+  },
   "devDependencies": {
     "@snowbeam/typescript": "*",
     "@types/node": "^20",
@@ -42,11 +49,5 @@
     "postcss": "^8",
     "tailwindcss": "^3.3.0",
     "typescript": "^5"
-  },
-  "dependencies": {
-    "next": "14.0.4",
-    "react": "^18",
-    "react-dom": "^18",
-    "snowbeam-workflow-builder-editor": "*"
   }
 }
