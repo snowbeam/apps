@@ -1,0 +1,95 @@
+{
+  "name": "@snowbeam/cli",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "homepage": "https://github.com/snowbeam/snowbeam",
+  "description": "📟 Snowbeam cli",
+  "engines": {
+    "node": ">=18.10",
+    "pnpm": ">=8.9"
+  },
+  "packageManager": "pnpm@8.9.0",
+  "scripts": {
+    "echo": "echo \"Snowbeam PNPM Workspace - 📟 Snowbeam cli\"",
+    "build": "shx rm -rf dist && tsc -b",
+    "lint": "eslint . --ext .ts",
+    "postpack": "shx rm -f oclif.manifest.json",
+    "posttest": "pnpm lint",
+    "prepack": "pnpm build && oclif manifest && oclif readme",
+    "prepare": "pnpm build",
+    "test": "mocha --forbid-only \"test/**/*.test.ts\"",
+    "version": "oclif readme && git add README.md",
+    "prettier:format": "prettier --check .",
+    "prettier:format:fix": "prettier --write ."
+  },
+  "keywords": [
+    "oclif"
+  ],
+  "author": {
+    "name": "Md Irshad",
+    "email": "mdirshaddev@gmail.com",
+    "url": "https://mdirshad.vercel.app"
+  },
+  "bugs": "https://github.com/snowbeam/snowbeam/issues",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/snowbeam/snowbeam.git",
+    "directory": "packages/cli"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "@oclif/core": "^3",
+    "@oclif/plugin-help": "^6",
+    "@oclif/plugin-plugins": "^4"
+  },
+  "devDependencies": {
+    "@oclif/prettier-config": "^0.2.1",
+    "@oclif/test": "^3",
+    "@types/chai": "^4",
+    "@types/mocha": "^10",
+    "@types/node": "^18",
+    "chai": "^4",
+    "eslint": "^8",
+    "eslint-config-oclif": "^5",
+    "eslint-config-oclif-typescript": "^3",
+    "eslint-config-prettier": "^9.1.0",
+    "mocha": "^10",
+    "oclif": "^4.3.6",
+    "prettier": "^3.2.4",
+    "shx": "^0.3.4",
+    "ts-node": "^10.9.2",
+    "typescript": "^5"
+  },
+  "types": "dist/index.d.ts",
+  "exports": "./lib/index.js",
+  "files": [
+    "/bin",
+    "/dist",
+    "/oclif.manifest.json"
+  ],
+  "bin": {
+    "snowbeam": "./bin/run.js"
+  },
+  "oclif": {
+    "bin": "snowbeam",
+    "dirname": "snowbeam",
+    "commands": "./dist/commands",
+    "plugins": [
+      "@oclif/plugin-help",
+      "@oclif/plugin-plugins"
+    ],
+    "topicSeparator": " ",
+    "topics": {
+      "tables": {
+        "description": "Tables created for managing data"
+      },
+      "workflows": {
+        "description": "Manage workflows"
+      },
+      "forms": {
+        "description": ""
+      }
+    }
+  }
+}
