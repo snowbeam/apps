@@ -1,0 +1,16 @@
+{
+  "compilerOptions": {
+    "rootDir": ".",
+    "types": ["node", "jest"],
+    "incremental": true,
+    "noEmit": true,
+    "declaration": true,
+    "baseUrl": "src",
+    "paths": {
+      "src/*": ["./*"]
+    },
+    "tsBuildInfoFile": "dist/typecheck.tsbuildinfo"
+  },
+  "include": ["src/**/*.ts", "test/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
+}

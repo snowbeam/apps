@@ -1,0 +1,31 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "extends": [],
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "module": "ESNext",
+
+    /* Bundler mode */
+    "allowJs": true,
+    "allowImportingTsExtensions": false,
+    "allowSyntheticDefaultImports": true,
+    "declaration": true,
+    "declarationDir": "./dist",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "noEmit": false,
+    "jsx": "react-jsx",
+    "moduleResolution": "bundler",
+
+    /* Path mappings */
+    "baseUrl": ".",
+
+    /* Other options */
+    "outDir": "dist",
+    "composite": true,
+    "tsBuildInfoFile": "dist/build.tsbuildinfo"
+  },
+  "include": ["src", "index.ts"],
+  "references": [{ "path": "./tsconfig.node.json" }]
+}
