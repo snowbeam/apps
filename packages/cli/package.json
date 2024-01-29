@@ -2,6 +2,7 @@
   "name": "@snowbeam/cli",
   "version": "0.0.0",
   "private": true,
+  "main": "src/index.ts",
   "type": "module",
   "homepage": "https://github.com/snowbeam/snowbeam",
   "description": "📟 Snowbeam cli",
@@ -62,7 +63,7 @@
     "typescript": "^5"
   },
   "types": "dist/index.d.ts",
-  "exports": "./lib/index.js",
+  "exports": "./dist/index.js",
   "files": [
     "/bin",
     "/dist",
