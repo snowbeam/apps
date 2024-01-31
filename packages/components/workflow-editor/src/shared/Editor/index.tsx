@@ -23,6 +23,13 @@ import ReactFlow, {
 
 const elk = new ELK();
 
+/* The `initialNodes` constant is an array of objects that represents the nodes in a graph. Each object
+in the array represents a node and has properties such as `id`, `type`, `data`, `position`, and
+`style`. The `id` property is a unique identifier for the node. The `type` property specifies the
+type of the node, such as "input" or "output". The `data` property contains additional data for the
+node, such as a label. The `position` property specifies the initial position of the node on the
+graph. The `style` property specifies the visual style of the node, such as the background color and
+text color. */
 const initialNodes = [
   {
     id: "1",
@@ -70,6 +77,8 @@ const initialNodes = [
   }
 ];
 
+/* The `initialEdges` constant is an array of objects that represents the edges (connections) between
+nodes in a graph. Each object in the array has the following properties: */
 const initialEdges = [
   { id: "e12", source: "1", target: "2", animated: true },
   { id: "e13", source: "1", target: "3", animated: true },
@@ -79,6 +88,13 @@ const initialEdges = [
   { id: "e2c2d", source: "2c", target: "2d", animated: true }
 ];
 
+/**
+ * The function `nodeColor` returns a color based on the type of the node, with different colors for
+ * "input", "output", and other types.
+ * @returns The function `nodeColor` returns a string representing the color code for a given node
+ * type. If the node type is "input", it returns "#6ede87". If the node type is "output", it returns
+ * "#6865A5". For any other node type, it returns "#ff0072".
+ */
 const nodeColor:
   | string
   | GetMiniMapNodeAttribute<"input" | "output" | "">
@@ -93,6 +109,13 @@ const nodeColor:
   }
 };
 
+/**
+ * The `useLayoutedElements` function is a custom hook in TypeScript React that uses the `useReactFlow`
+ * hook to get and set nodes and edges, and applies an ELK layout algorithm to layout the elements on a
+ * graph.
+ * @returns The function `useLayoutedElements` returns an object with a single property
+ * `getLayoutedElements`, which is a function.
+ */
 const useLayoutedElements = () => {
   const { getNodes, setNodes, getEdges, fitView } = useReactFlow();
   const defaultOptions = {
@@ -127,6 +150,12 @@ const useLayoutedElements = () => {
   return { getLayoutedElements };
 };
 
+/**
+ * The `Workflow` function returns a JSX element that represents a ReactFlow component with various
+ * layout options and additional features.
+ * @returns The function `Workflow` returns a JSX element, specifically a `ReactFlow` component with
+ * various props and child components.
+ */
 function Workflow(): JSX.Element {
   const [nodes, , onNodesChange] = useNodesState(initialNodes);
   const [edges, , onEdgesChange] = useEdgesState(initialEdges);
@@ -187,6 +216,12 @@ function Workflow(): JSX.Element {
   );
 }
 
+/**
+ * The `WorkflowEditor` function returns a component that provides a ReactFlow context and renders a
+ * `Workflow` component.
+ * @returns The `WorkflowEditor` function is returning a JSX element. It is wrapping the `Workflow`
+ * component with the `ReactFlowProvider` component.
+ */
 export function WorkflowEditor() {
   return (
     <ReactFlowProvider>

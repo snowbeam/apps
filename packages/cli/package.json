@@ -25,7 +25,11 @@
     "prettier:format:fix": "prettier --write ."
   },
   "keywords": [
-    "oclif"
+    "oclif",
+    "audit",
+    "workflow",
+    "tables",
+    "forms"
   ],
   "author": {
     "name": "Md Irshad",
@@ -62,20 +66,20 @@
     "ts-node": "^10.9.2",
     "typescript": "^5"
   },
-  "types": "dist/index.d.ts",
-  "exports": "./dist/index.js",
+  "types": "build/index.d.ts",
+  "exports": "./build/index.js",
   "files": [
     "/bin",
-    "/dist",
+    "/build",
     "/oclif.manifest.json"
   ],
   "bin": {
-    "snowbeam": "./bin/run.js"
+    "snowbeam": "./bin/snowbeam.js"
   },
   "oclif": {
     "bin": "snowbeam",
     "dirname": "snowbeam",
-    "commands": "./dist/commands",
+    "commands": "./build/commands",
     "plugins": [
       "@oclif/plugin-help",
       "@oclif/plugin-plugins"
@@ -89,7 +93,7 @@
         "description": "Manage workflows"
       },
       "forms": {
-        "description": ""
+        "description": "Manage forms"
       }
     }
   }
