@@ -1,19 +1,18 @@
-import type { AxiosRequestConfig } from "axios";
-import type { ClientOAuth2TokenData } from "src/ClientOAuth2Token";
+import { Agent } from 'node:https';
+import * as qs from 'node:querystring';
+import type { AxiosRequestConfig } from 'axios';
+import type { ClientOAuth2TokenData } from 'src/ClientOAuth2Token';
 
-import { CodeFlow } from "src/controllers/CodeFlow";
-import { getAuthError } from "src/utils/helpers";
-import { CredentialsFlow } from "src/controllers/CredentialsFlow";
+import axios from 'axios';
 
-import { ClientOAuth2Token } from "src/ClientOAuth2Token";
-
-import axios from "axios";
-import { Agent } from "node:https";
-import * as qs from "node:querystring";
+import { ClientOAuth2Token } from 'src/ClientOAuth2Token';
+import { CodeFlow } from 'src/controllers/CodeFlow';
+import { CredentialsFlow } from 'src/controllers/CredentialsFlow';
+import { getAuthError } from 'src/utils/helpers';
 
 export interface ClientOAuth2RequestObj {
   url: string;
-  method: "HEAD" | "GET" | "POST" | "PUT" | "PATCH" | "DELETE";
+  method: 'HEAD' | 'GET' | 'POST' | 'PUT' | 'PATCH' | 'DELETE';
   body?: Record<string, any>;
   query?: qs.ParsedUrlQuery;
   headers?: Record<string, string | string[]>;
@@ -27,7 +26,7 @@ export interface ClientOAuth2Options {
   authorizationUri?: string;
   redirectUri?: string;
   scopes?: string[];
-  scopesSeparator?: "," | " ";
+  scopesSeparator?: ',' | ' ';
   authorizationGrants?: string[];
   state?: string;
   body?: Record<string, any>;
@@ -41,7 +40,7 @@ class ResponseError extends Error {
   constructor(
     readonly status: number,
     readonly body: object,
-    readonly code = "ESTATUS"
+    readonly code = 'ESTATUS'
   ) {
     super(`HTTP status ${status}`);
   }
@@ -81,7 +80,7 @@ export class ClientOAuth2 {
   createToken(data: ClientOAuth2TokenData, type?: string): ClientOAuth2Token {
     return new ClientOAuth2Token(this, {
       ...data,
-      ...(typeof type === "string" ? { token_type: type } : type)
+      ...(typeof type === 'string' ? { token_type: type } : type)
     });
   }
 
@@ -105,7 +104,7 @@ export class ClientOAuth2 {
     const query = qs.stringify(options.query);
 
     if (query) {
-      url += (url.indexOf("?") === -1 ? "?" : "&") + query;
+      url += (url.indexOf('?') === -1 ? '?' : '&') + query;
     }
 
     const requestConfig: AxiosRequestConfig = {

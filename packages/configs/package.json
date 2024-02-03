@@ -12,7 +12,7 @@
   },
   "packageManager": "pnpm@8.9.0",
   "scripts": {
-    "echo": "echo \"Snowbeam PNPM Workspace - 🛠️ Snowbeam instance configuration\"",
+    "echo": "echo \"Snowbeam PNPM Workspace - 🛠️  Snowbeam instance configuration\"",
     "build": "tsc -p tsconfig.build.json && tsc-alias -p tsconfig.build.json",
     "eslint": "eslint . --quiet",
     "eslint:fix": "eslint . --fix",
@@ -33,8 +33,9 @@
     "directory": "packages/configs"
   },
   "license": "MIT",
-  "dependencies": {},
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
+    "@snowbeam/prettier-config": "workspace:^",
     "prettier": "^3.2.4",
     "tsc-alias": "^1.8.8",
     "typescript": "^5.3.3"

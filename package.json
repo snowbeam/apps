@@ -56,6 +56,7 @@
     "ts-node": "^10.9.2"
   },
   "devDependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.1.1",
     "@ngneat/falso": "^7.1.1",
     "@total-typescript/ts-reset": "^0.5.1",
     "@types/jest": "^29.5.11",

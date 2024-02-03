@@ -1,22 +1,21 @@
-import type { ClientOAuth2Options } from "src/ClientOAuth2";
-import { ClientOAuth2TokenData } from "src/ClientOAuth2Token";
+import * as qs from 'node:querystring';
+import type { ClientOAuth2, ClientOAuth2Options } from 'src/ClientOAuth2';
 
-import type { ClientOAuth2 } from "src/ClientOAuth2";
-
-import { DEFAULT_HEADERS, DEFAULT_URL_BASE } from "src/constants";
-
-import { ClientOAuth2Token } from "src/ClientOAuth2Token";
+import {
+  ClientOAuth2Token,
+  ClientOAuth2TokenData
+} from 'src/ClientOAuth2Token';
+import { DEFAULT_HEADERS, DEFAULT_URL_BASE } from 'src/constants';
 import {
   auth,
   expects,
   getAuthError,
   getRequestOptions
-} from "src/utils/helpers";
-import * as qs from "node:querystring";
+} from 'src/utils/helpers';
 
 export interface CodeFlowBody {
   code: string | string[];
-  grant_type: "authorization_code";
+  grant_type: 'authorization_code';
   redirect_uri?: string;
   client_id?: string;
 }
@@ -39,7 +38,7 @@ export class CodeFlow {
     const options: ClientOAuth2Options = { ...this.client.options, ...opts };
 
     // Check the required parameters are set.
-    expects(options, "clientId", "authorizationUri");
+    expects(options, 'clientId', 'authorizationUri');
 
     const url = new URL(options.authorizationUri as string);
 
@@ -47,10 +46,10 @@ export class CodeFlow {
       ...options.query,
       client_id: options.clientId,
       redirect_uri: options.redirectUri,
-      response_type: "code",
+      response_type: 'code',
       state: options.state,
       ...(options.scopes
-        ? { scope: options.scopes.join(options.scopesSeparator ?? " ") }
+        ? { scope: options.scopes.join(options.scopesSeparator ?? ' ') }
         : {})
     };
 
@@ -72,16 +71,16 @@ export class CodeFlow {
     opts?: Partial<ClientOAuth2Options>
   ): Promise<ClientOAuth2Token> {
     const options: ClientOAuth2Options = { ...this.client.options, ...opts };
-    expects(options, "clientId", "accessTokenUri");
+    expects(options, 'clientId', 'accessTokenUri');
 
     const url = new URL(urlString, DEFAULT_URL_BASE);
     if (
-      typeof options.redirectUri === "string" &&
-      typeof url.pathname === "string" &&
+      typeof options.redirectUri === 'string' &&
+      typeof url.pathname === 'string' &&
       url.pathname !== new URL(options.redirectUri, DEFAULT_URL_BASE).pathname
     ) {
       throw new TypeError(
-        "Redirected path should match configured path, but got: " + url.pathname
+        'Redirected path should match configured path, but got: ' + url.pathname
       );
     }
 
@@ -90,7 +89,7 @@ export class CodeFlow {
     }
 
     const data =
-      typeof url.search === "string"
+      typeof url.search === 'string'
         ? qs.parse(url.search.substring(1))
         : url.search || {};
 
@@ -111,13 +110,13 @@ export class CodeFlow {
 
     // Check whether the response code is set.
     if (!data.code) {
-      throw new TypeError("Missing code, unable to request token");
+      throw new TypeError('Missing code, unable to request token');
     }
 
     const headers = { ...DEFAULT_HEADERS };
     const body: CodeFlowBody = {
       code: data.code,
-      grant_type: "authorization_code",
+      grant_type: 'authorization_code',
       redirect_uri: options.redirectUri
     };
 
@@ -133,7 +132,7 @@ export class CodeFlow {
     const requestOptions = getRequestOptions(
       {
         url: options.accessTokenUri,
-        method: "POST",
+        method: 'POST',
         headers,
         body
       },

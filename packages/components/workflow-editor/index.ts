@@ -1,1 +1,1 @@
-export { WorkflowEditor } from "./src/shared/Editor";
+export { WorkflowEditor } from './src/shared/Editor';

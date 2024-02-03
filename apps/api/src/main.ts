@@ -1,30 +1,31 @@
 import { VersioningType } from '@nestjs/common';
+import { ConfigService } from '@nestjs/config';
 import { NestFactory } from '@nestjs/core';
 import {
   FastifyAdapter,
-  NestFastifyApplication,
+  NestFastifyApplication
 } from '@nestjs/platform-fastify';
-import { ConfigService } from '@nestjs/config';
-import { SwaggerModule, DocumentBuilder } from '@nestjs/swagger';
+import { DocumentBuilder, SwaggerModule } from '@nestjs/swagger';
+
 import { AppModule } from 'src/app.module';
 
 async function bootstrap() {
   const app = await NestFactory.create<NestFastifyApplication>(
     AppModule,
     new FastifyAdapter({ logger: { enabled: true, level: 'info' } }),
-    { forceCloseConnections: false },
+    { forceCloseConnections: false }
   );
 
   const configService: ConfigService = app.get(ConfigService);
 
   app.enableCors({
-    origin: process.env.SNOWBEAM_WEB_APP,
+    origin: process.env.SNOWBEAM_WEB_APP
   });
 
   app.enableVersioning({
     type: VersioningType.URI,
     prefix: 'v',
-    defaultVersion: '0',
+    defaultVersion: '0'
   });
 
   const config = new DocumentBuilder()

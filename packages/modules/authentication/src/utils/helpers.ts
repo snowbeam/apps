@@ -3,8 +3,9 @@
 import type {
   ClientOAuth2Options,
   ClientOAuth2RequestObj
-} from "src/ClientOAuth2";
-import { ERROR_RESPONSES } from "src/constants";
+} from 'src/ClientOAuth2';
+
+import { ERROR_RESPONSES } from 'src/constants';
 
 /**
  * Check if properties exist on an object and throw when they aren't.
@@ -28,7 +29,7 @@ export class AuthError extends Error {
   constructor(
     message: string,
     readonly body: any,
-    readonly code = "EAUTH"
+    readonly code = 'EAUTH'
   ) {
     super(message);
   }
@@ -55,7 +56,7 @@ export function getAuthError(body: {
  * Ensure a value is a string.
  */
 function toString(str: string | null | undefined) {
-  return str === null ? "" : String(str);
+  return str === null ? '' : String(str);
 }
 
 /**
@@ -63,9 +64,9 @@ function toString(str: string | null | undefined) {
  */
 export function auth(username: string, password: string): string {
   return (
-    "Basic " +
-    Buffer.from(toString(username) + ":" + toString(password)).toString(
-      "base64"
+    'Basic ' +
+    Buffer.from(toString(username) + ':' + toString(password)).toString(
+      'base64'
     )
   );
 }
@@ -86,7 +87,7 @@ export function getRequestOptions(
     ignoreSSLIssues: options.ignoreSSLIssues
   };
   // if request authorization was overridden delete it from header
-  if (rOptions.headers.Authorization === "") {
+  if (rOptions.headers.Authorization === '') {
     delete rOptions.headers.Authorization;
   }
   return rOptions;

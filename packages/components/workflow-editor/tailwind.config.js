@@ -1,11 +1,11 @@
 /** @type {import('tailwindcss').Config} */
 export default {
   content: [
-    "./index.html",
-    "**/*.{ts,tsx,js,jsx,mdx}",
-    "**/*.stories.{ts,tsx,js,jsx,mdx}"
+    './index.html',
+    '**/*.{ts,tsx,js,jsx,mdx}',
+    '**/*.stories.{ts,tsx,js,jsx,mdx}'
   ],
-  darkMode: "media",
+  darkMode: 'media',
   presets: [],
   theme: {
     extend: {}

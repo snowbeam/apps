@@ -1,15 +1,12 @@
-import type { ClientOAuth2Options } from "src/ClientOAuth2";
-import { ClientOAuth2TokenData } from "src/ClientOAuth2Token";
+import type { ClientOAuth2, ClientOAuth2Options } from 'src/ClientOAuth2';
+import type { ClientOAuth2Token } from 'src/ClientOAuth2Token';
 
-import type { ClientOAuth2 } from "src/ClientOAuth2";
-import type { ClientOAuth2Token } from "src/ClientOAuth2Token";
-
-import { DEFAULT_HEADERS } from "src/constants";
-
-import { auth, expects, getRequestOptions } from "src/utils/helpers";
+import { ClientOAuth2TokenData } from 'src/ClientOAuth2Token';
+import { DEFAULT_HEADERS } from 'src/constants';
+import { auth, expects, getRequestOptions } from 'src/utils/helpers';
 
 export interface CredentialsFlowBody {
-  grant_type: "client_credentials";
+  grant_type: 'client_credentials';
   scope?: string;
 }
 
@@ -30,20 +27,20 @@ export class CredentialsFlow {
     opts?: Partial<ClientOAuth2Options>
   ): Promise<ClientOAuth2Token> {
     const options = { ...this.client.options, ...opts };
-    expects(options, "clientId", "clientSecret", "accessTokenUri");
+    expects(options, 'clientId', 'clientSecret', 'accessTokenUri');
 
     const body: CredentialsFlowBody = {
-      grant_type: "client_credentials"
+      grant_type: 'client_credentials'
     };
 
     if (options.scopes !== undefined) {
-      body.scope = options.scopes.join(options.scopesSeparator ?? " ");
+      body.scope = options.scopes.join(options.scopesSeparator ?? ' ');
     }
 
     const requestOptions = getRequestOptions(
       {
         url: options.accessTokenUri,
-        method: "POST",
+        method: 'POST',
         headers: {
           ...DEFAULT_HEADERS,
           // eslint-disable-next-line .typescript-eslint/naming-convention

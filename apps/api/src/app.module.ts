@@ -2,9 +2,10 @@ import {
   MiddlewareConsumer,
   Module,
   NestModule,
-  RequestMethod,
+  RequestMethod
 } from '@nestjs/common';
 import { ConfigModule } from '@nestjs/config';
+
 import { AppController } from 'src/app.controller';
 import { AppService } from 'src/app.service';
 import { FastifyLoggerMiddleware } from 'src/middlewares/logger/fastifylogger.middleware';
@@ -13,11 +14,11 @@ import { FastifyLoggerMiddleware } from 'src/middlewares/logger/fastifylogger.mi
   imports: [
     ConfigModule.forRoot({
       isGlobal: true,
-      envFilePath: '.env',
-    }),
+      envFilePath: '.env'
+    })
   ],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [AppService]
 })
 export class AppModule implements NestModule {
   configure(consumer: MiddlewareConsumer) {
