@@ -55,7 +55,7 @@ async function bootstrap() {
     .build();
   const document = SwaggerModule.createDocument(app, config);
 
-  SwaggerModule.setup("snowbeam/api/swagger", app, document);
+  SwaggerModule.setup("snowbeam/api/swagger-docs", app, document);
 
   await app.listen(configService.get("PORT"));
 }
