@@ -9,3 +9,10 @@ node_modules
 **/build
 **/.next
 **/tmp
+
+# pnpm
+.pnpm
+.pnpm-store
+
+# env
+nx-cloud.env

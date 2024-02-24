@@ -1,7 +1,7 @@
-import { FastifyLoggerMiddleware } from './fastifylogger.middleware';
+import { FastifyLoggerMiddleware } from "./fastifylogger.middleware";
 
-describe('LoggerMiddleware', () => {
-  it('should be defined', () => {
+describe("LoggerMiddleware", () => {
+  it("should be defined", () => {
     expect(new FastifyLoggerMiddleware()).toBeDefined();
   });
 });

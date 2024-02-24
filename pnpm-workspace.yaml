@@ -1,6 +1,2 @@
 packages:
   - "apps/*"
-  - "packages/*"
-  - "packages/components/*"
-  - "packages/configs/*"
-  - "packages/modules/*"
