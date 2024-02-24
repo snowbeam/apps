@@ -1,87 +1,51 @@
 {
+  "$schema": "https://json.schemastore.org/package",
   "name": "snowbeam",
   "version": "0.0.0",
   "private": true,
-  "homepage": "https://snowbeam.github.io",
-  "description": "💠 A SaaS tool for building IT Workflows, Managing customers data, advanced dashboard and reporting.",
-  "engines": {
-    "node": ">=18.10",
-    "pnpm": ">=8.9"
-  },
-  "packageManager": "pnpm@8.9.0",
+  "homepage": "https://github.com/snowbeam/snowbeam.git",
+  "description": "💠 Snowbeam PaaS",
   "scripts": {
-    "echo": "echo \"Snowbeam PNPM Workspace\"",
-    "prettier:format": "prettier -c .",
-    "prettier:format:fix": "prettier -w ."
+    "echo": "echo \"Snowbeam PNPM Workspace - 💠 Snowbeam PaaS\"",
+    "preinstall": "node scripts/block-npm-or-yarn-script.js",
+    "recursive:eslint:lint": "pnpm recursive run eslint:lint",
+    "recursive:eslint:lint:fix": "pnpm recursive run eslint:lint:fix",
+    "recursive:prettier:format": "pnpm recursive run prettier:format",
+    "recursive:prettier:format:fix": "pnpm recursive run prettier:format:fix"
   },
   "keywords": [
-    "snowbeam",
-    "node",
-    "typescript",
-    "docker",
-    "k8s",
-    "iaas",
-    "ipaas",
-    "custom-applications",
-    "automated",
+    "automation",
     "low-code",
-    "data-flow",
-    "workflow-automation",
-    "low-code-development-platform",
     "low-code-platform",
-    "integrations",
-    "integrations-framework",
-    "workflow-builder",
+    "app-studio",
+    "workflow-engine",
+    "resource-management",
+    "tables-management",
+    "notifications",
     "form-builder",
-    "business-process-management"
+    "automation-pipelines",
+    "paas"
   ],
   "author": {
     "name": "Md Irshad",
     "email": "mdirshaddev@gmail.com",
     "url": "https://mdirshad.vercel.app"
   },
-  "bugs": "https://github.com/snowbeam/snowbeam/issues",
+  "bugs": {
+    "url": "https://github.com/snowbeam/snowbeam/issues",
+    "email": "mdirshaddev+snowbeam@gmail.com"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/snowbeam/snowbeam.git"
   },
   "license": "MIT",
   "devDependencies": {
-    "@ngneat/falso": "^7.1.1",
-    "@types/jest": "^29.5.11",
-    "@types/node": "^20.10.6",
-    "@types/react": "^18.2.46",
-    "@types/react-dom": "^18.2.18",
-    "@types/supertest": "^6.0.2",
-    "@vitest/coverage-v8": "^1.1.3",
-    "cross-env": "^7.0.3",
-    "cypress": "^13.6.2",
-    "cypress-otp": "^1.0.3",
-    "cypress-real-events": "^1.11.0",
-    "jest": "^29.7.0",
-    "jest-environment-jsdom": "^29.7.0",
-    "jest-expect-message": "^1.1.3",
-    "jest-mock": "^29.7.0",
-    "jest-mock-extended": "^3.0.5",
-    "nock": "^13.4.0",
-    "nodemon": "^3.0.2",
-    "nx": "17.2.8",
-    "prettier": "^3.1.1",
-    "rimraf": "^5.0.5",
-    "run-script-os": "^1.1.6",
-    "start-server-and-test": "^2.0.3",
-    "supertest": "^6.3.3",
-    "ts-jest": "^29.1.1",
-    "tsc-alias": "^1.8.8",
-    "tsc-watch": "^6.0.4",
-    "typescript": "^5.3.3",
-    "vite": "^5.0.8",
-    "vitest": "^1.1.3"
+    "@changesets/cli": "^2.27.1"
   },
-  "dependencies": {
-    "@sentry/node": "^7.92.0",
-    "next": "14.0.4",
-    "react": "^18.2.0",
-    "react-dom": "^18.2.0"
-  }
+  "engines": {
+    "node": ">=18.10",
+    "pnpm": ">=8.9"
+  },
+  "packageManager": "pnpm@8.9.0"
 }

@@ -1,6 +1,6 @@
 <mxfile host="65bd71144e">
     <diagram id="Ms08uIIFTFa7wRjynzIY" name="System Design Schema">
-        <mxGraphModel dx="1496" dy="411" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="1417" dy="365" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -26,7 +26,7 @@
         </mxGraphModel>
     </diagram>
     <diagram id="ff3YznL3YHIMQ_EQc5Jx" name="System Design Blueprint">
-        <mxGraphModel dx="646" dy="411" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+        <mxGraphModel dx="567" dy="365" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -34,7 +34,7 @@
         </mxGraphModel>
     </diagram>
     <diagram name="Example (DB Schema)" id="efa7a0a1-bf9b-a30e-e6df-94a7791c09e9">
-        <mxGraphModel dx="994" dy="632" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
+        <mxGraphModel dx="567" dy="365" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="826" pageHeight="1169" background="none" math="0" shadow="0">
             <root>
                 <mxCell id="0"/>
                 <mxCell id="1" parent="0"/>
@@ -405,6 +405,29 @@
                     <mxGeometry x="-1" relative="1" as="geometry">
                         <mxPoint x="-19.99999999999982" y="2.499999999999909" as="offset"/>
                     </mxGeometry>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+    <diagram id="b5GrjLTp9_BDjerWCjOs" name="Notes">
+        <mxGraphModel dx="567" dy="365" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="4RANlmQMKBtcAXvbY8Sn-3" value="" style="group;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1" connectable="0">
+                    <mxGeometry x="50" y="70" width="360" height="260" as="geometry"/>
+                </mxCell>
+                <mxCell id="4RANlmQMKBtcAXvbY8Sn-1" value="&lt;h1&gt;Snowbeam CLI&lt;/h1&gt;&lt;p&gt;CLI for allowing to list down workflows and run some manual workflows by command and take export of package for backup etc.&lt;/p&gt;&lt;p&gt;It can also help us in opening the UI when we need it&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="4RANlmQMKBtcAXvbY8Sn-3" vertex="1">
+                    <mxGeometry width="360" height="150" as="geometry"/>
+                </mxCell>
+                <mxCell id="4RANlmQMKBtcAXvbY8Sn-2" value="&lt;h1&gt;Kubernetes Cluster&lt;/h1&gt;&lt;p&gt;With Docker image for each microservices so we could scale up and down automatically as per need of computation power.&amp;nbsp;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="4RANlmQMKBtcAXvbY8Sn-3" vertex="1">
+                    <mxGeometry y="150" width="360" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="4RANlmQMKBtcAXvbY8Sn-4" value="&lt;h1&gt;Next.js - Admin Application&lt;/h1&gt;&lt;p&gt;Acting as a control plane for User facing application&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="70" width="300" height="110" as="geometry"/>
+                </mxCell>
+                <mxCell id="4RANlmQMKBtcAXvbY8Sn-5" value="&lt;h1&gt;Next.js - User Application&lt;/h1&gt;&lt;p&gt;&lt;br&gt;&lt;/p&gt;" style="text;html=1;strokeColor=none;fillColor=none;spacing=5;spacingTop=-20;whiteSpace=wrap;overflow=hidden;rounded=0;" parent="1" vertex="1">
+                    <mxGeometry x="450" y="220" width="300" height="110" as="geometry"/>
                 </mxCell>
             </root>
         </mxGraphModel>

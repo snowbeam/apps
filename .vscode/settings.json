@@ -8,6 +8,10 @@
   "editor.formatOnSaveMode": "modificationsIfAvailable",
   "editor.formatOnType": true,
   "editor.autoIndent": "full",
+  "editor.codeActionsOnSave": {
+    "source.fixAll": "explicit",
+    "source.fixAll.eslint": "explicit"
+  },
   // File Extension config
   "[json]": {
     "editor.tabSize": 2,
@@ -64,5 +68,6 @@
       "strings": true
     },
     "editor.suggest.insertMode": "replace"
-  }
+  },
+  "editor.fontLigatures": true
 }

@@ -3,3 +3,16 @@ node_modules
 
 # nx
 .nx/cache
+
+# ignore all dist folders
+**/dist
+**/build
+**/.next
+**/tmp
+
+# pnpm
+.pnpm
+.pnpm-store
+
+# env
+nx-cloud.env
